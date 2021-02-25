@@ -13,13 +13,14 @@ let score = [];
 const submitForm = new HandleForm($form, $fieldsets, $result, goodAnswers, userAnswers, score);
 
 $form.addEventListener("submit", e => {
+    
     e.preventDefault();
     for(let i = 1; i < $fieldsets.length + 1; i++){
-        userAnswers.push(document.querySelector(`input[name=q${i}]:checked`).value);
+        submitForm.userAnswers.push(document.querySelector(`input[name=q${i}]:checked`).value);
     }
     
     submitForm.checkResult();
-    userAnswers = [];
+    submitForm.userAnswers = [];
     
 });
 
