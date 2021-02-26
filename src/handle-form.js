@@ -1,13 +1,14 @@
 export default class HandleForm{
     
-    constructor(form, fieldsets, resultDisplay, goodAnswers, userAnswers, score, resultDiv){
+    constructor(form, fieldsets, resultDisplay, goodAnswers, userAnswers, score, resultDiv, gifGoodAnswers){
         this._form = form,
         this._fieldsets = fieldsets,
         this._resultDisplay = resultDisplay,
         this.goodAnswers = goodAnswers,
         this.userAnswers = userAnswers,
         this.score = score,
-        this.resultDiv = resultDiv
+        this._resultDiv = resultDiv,
+        this._gifGoodAnswers = gifGoodAnswers
     }
 
     checkResult(){
@@ -25,27 +26,27 @@ export default class HandleForm{
         switch (this.result) {
             case 0:
                 console.log("5/5");
-                this.resultDiv.innerHTML = "5/5"; 
+                this._resultDiv.innerHTML = "<p>5/5</p><img src=\""+ this._gifGoodAnswers[0] +"\"/><p class=\"comment\">Parfait</p>"; 
                 break;
             case 1:
                 console.log("4/5");
-                this.resultDiv.innerHTML = "4/5";
+                this._resultDiv.innerHTML = "<p>4/5</p><img src=\""+ this._gifGoodAnswers[1] +"\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
                 break;
             case 2:
                 console.log("3/5");
-                this.resultDiv.innerHTML = "3/5";
+                this._resultDiv.innerHTML = "<p>3/5</p><img src=\""+ this._gifGoodAnswers[2] +"\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
                 break;
             case 3:
                 console.log("2/5");
-                this.resultDiv.innerHTML = "2/5";
+                this._resultDiv.innerHTML = "<p>2/5</p><img src=\""+ this._gifGoodAnswers[3] +"\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
                 break;
             case 4:
                 console.log("1/5");
-                this.resultDiv.innerHTML = "1/5";
+                this._resultDiv.innerHTML = "<p>1/5</p><img src=\""+ this._gifGoodAnswers[4] +"\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
                 break;
             case 5:
                 console.log("0/5");
-                this.result.innerHTML = "0/5";
+                this._resultDiv.innerHTML = "<p>0/5</p><img src=\""+ this._gifGoodAnswers[5] +"\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
                 break;
             default:
                 console.log("Ooops");

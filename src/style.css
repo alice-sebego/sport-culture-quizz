@@ -100,9 +100,14 @@ input[type=submit]{
     padding: 1.5vh;
     color: rgb(9, 86, 131);
     text-align: center;
-    font-weight: 800;
+    font: 800 2.5em 'Russo One';
     background-color: white;
     border-radius: 0 0 .2em .2em ;
+}
+
+p.comment{
+    font-weight:300;
+    font-size: .6em;
 }
 
 @keyframes echec {
