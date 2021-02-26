@@ -1,13 +1,13 @@
 export default class HandleForm{
     
-    constructor(form, fieldsets, resultDisplay, goodAnswers, userAnswers, score){
+    constructor(form, fieldsets, resultDisplay, goodAnswers, userAnswers, score, resultDiv){
         this._form = form,
         this._fieldsets = fieldsets,
         this._resultDisplay = resultDisplay,
         this.goodAnswers = goodAnswers,
         this.userAnswers = userAnswers,
         this.score = score,
-        this.result = result
+        this.resultDiv = resultDiv
     }
 
     checkResult(){
@@ -24,22 +24,28 @@ export default class HandleForm{
     
         switch (this.result) {
             case 0:
-                console.log("5/5"); 
+                console.log("5/5");
+                this.resultDiv.innerHTML = "5/5"; 
                 break;
             case 1:
                 console.log("4/5");
+                this.resultDiv.innerHTML = "4/5";
                 break;
             case 2:
                 console.log("3/5");
+                this.resultDiv.innerHTML = "3/5";
                 break;
             case 3:
                 console.log("2/5");
+                this.resultDiv.innerHTML = "2/5";
                 break;
             case 4:
                 console.log("1/5");
+                this.resultDiv.innerHTML = "1/5";
                 break;
             case 5:
                 console.log("0/5");
+                this.result.innerHTML = "0/5";
                 break;
             default:
                 console.log("Ooops");

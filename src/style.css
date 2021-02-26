@@ -45,7 +45,7 @@ form{
     box-shadow: 0 .2rem .3rem rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(.2rem);
     -webkit-backdrop-filter: blur(.2rem);
-    border-radius: .3rem;
+    border-radius: .3rem .3rem 0 0;
 }
 
 fieldset{
@@ -92,6 +92,17 @@ input[type=submit]{
 
 .echec {
     animation: echec 0.3s ease-in-out;
+}
+
+#result{
+    width: 100%;
+    margin-top: 1vh;
+    padding: 1.5vh;
+    color: rgb(9, 86, 131);
+    text-align: center;
+    font-weight: 800;
+    background-color: white;
+    border-radius: 0 0 .2em .2em ;
 }
 
 @keyframes echec {
