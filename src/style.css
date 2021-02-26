@@ -72,8 +72,7 @@ legend{
 
 label{
     font-size: smaller;
-    font-weight: 600;
-    
+    font-weight: 600;   
 }
 
 input[type="radio"] {
@@ -101,13 +100,12 @@ border-radius: 1rem;
 input[type="radio"] + label::before {
 border: 1px solid rgb(9, 86, 131);
 background-color: #eee;
-
 }
+
 input[type="radio"]:checked + label::after {
 background-color: rgb(9, 86, 131);
 }
   
-
 input[type=submit]{
     width: 100%;
     padding: 1em;
@@ -129,7 +127,7 @@ input[type=submit]{
 #result{
     width: 100%;
     margin-top: 1vh;
-    padding: 1.5vh;
+    /* padding: 1.5vh; */
     color: rgb(9, 86, 131);
     text-align: center;
     font: 800 2.5em 'Russo One';

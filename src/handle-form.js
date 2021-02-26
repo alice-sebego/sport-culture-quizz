@@ -12,17 +12,21 @@ export default class HandleForm{
     }
 
     checkResult(){
+
         for(let i = 0; i < this._fieldsets.length; i ++){
             this.userAnswers[i] === this.goodAnswers[i] ? this.score.push(true) : this.score.push(false);     
        }
        this.displayResult(this.score);
        this.handleDisplayAnswer(this.score);
        this.score = [];
+
     }
 
     displayResult(){
+
         this.result = this.score.filter(userScore => userScore !== true ).length;
-    
+        this._resultDiv.style.padding = "1.5vh";
+
         switch (this.result) {
             case 0:
                 console.log("5/5");
@@ -67,5 +71,6 @@ export default class HandleForm{
                 }, 500)
             }
         }
+        
     }
 }
