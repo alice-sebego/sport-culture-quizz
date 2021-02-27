@@ -168,3 +168,20 @@ input[type=submit]:hover{
         line-height: 1.5em;
     }  
 }
+
+footer{
+    width: 100%;
+    margin-top: 5vh;
+    padding: 2vh 2vw;
+    text-align: center;
+    background-color: rgb(9, 86, 131);
+    color: white;
+    font-weight: 400;
+    font-size: .9em;
+    letter-spacing: .09em;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}

@@ -1,5 +1,6 @@
 import HandleForm from "./handle-form.js";
 import gifGoodAnswers from "./gif-list.js";
+import year from "./utils.js";
 
 const $form = document.querySelector("form");
 const $resultDisplay = document.querySelector("#result");
@@ -36,3 +37,7 @@ $fieldsets.forEach(fieldset => {
     })
 });
 
+// Handle date in the footer's content
+
+const $year = document.getElementById("year");
+$year.textContent = year.getUTCFullYear();
