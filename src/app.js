@@ -15,27 +15,13 @@ let score = [];
 
 const submitForm = new HandleForm($form, $fieldsets, $resultDisplay, goodAnswers, userAnswers, score, $result, gifGoodAnswers);
 
-$form.addEventListener("submit", e => {
-    
-    e.preventDefault();
-
-    for(let i = 1; i < $fieldsets.length + 1; i++){
-        submitForm.userAnswers.push(document.querySelector(`input[name=q${i}]:checked`).value);
-    }
-    
-    submitForm.checkResult();
-    submitForm.userAnswers = [];
-    
-});
-
+submitForm.submitEvent();
 
 // Handling click's event on fieldsets
 
-$fieldsets.forEach(fieldset => {
-    fieldset.addEventListener("click", () => {
-        fieldset.style.backgroundColor = "white";
-    })
-});
+submitForm.clickAnswer("white");
+
+// /!\ Handle when user has forgot answer a question !!!
 
 // Handle date in the footer's content
 

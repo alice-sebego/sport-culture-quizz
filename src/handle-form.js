@@ -73,4 +73,29 @@ export default class HandleForm{
         }
         
     }
+
+    submitEvent(){
+
+        this._form.addEventListener("submit", e => {
+    
+            e.preventDefault();
+        
+            for(let i = 1; i < this._fieldsets.length + 1; i++){
+                this.userAnswers.push(document.querySelector(`input[name=q${i}]:checked`).value);
+            }
+            
+            this.checkResult();
+            this.userAnswers = [];
+            
+        });
+    }
+
+    clickAnswer(color){
+        this._fieldsets.forEach(fieldset => {
+            fieldset.addEventListener("click", () => {
+                fieldset.style.backgroundColor = color;
+            })
+        });
+    }
+    
 }
