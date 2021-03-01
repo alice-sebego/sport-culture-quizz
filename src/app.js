@@ -16,6 +16,7 @@ let score = [];
 const submitForm = new HandleForm($form, $fieldsets, $resultDisplay, goodAnswers, userAnswers, score, $result, gifGoodAnswers);
 
 submitForm.submitEvent();
+console.log(submitForm.userAnswers);
 
 // Handling click's event on fieldsets
 

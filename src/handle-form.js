@@ -15,11 +15,19 @@ export default class HandleForm{
 
         for(let i = 0; i < this._fieldsets.length; i ++){
             this.userAnswers[i] === this.goodAnswers[i] ? this.score.push(true) : this.score.push(false);     
-       }
-       this.displayResult(this.score);
-       this.handleDisplayAnswer(this.score);
-       this.score = [];
+        }
+        this.displayResult(this.score);
+        this.handleDisplayAnswer(this.score);
+        this.score = [];
+   
+    }
 
+    displayMissingAnswer(){
+        const missingAnswer = document.createElement("div");
+        missingAnswer.style.fontSize = "smaller";
+        missingAnswer.innerHTML = "<p>Pour vérifier toutes vos réponses, vous devez répondre à toutes les questions<br/>Vérifiez SVP<p>";
+        this._resultDiv.appendChild(missingAnswer);
+        this.userAnswers = [];
     }
 
     displayResult(){
@@ -81,11 +89,18 @@ export default class HandleForm{
             e.preventDefault();
         
             for(let i = 1; i < this._fieldsets.length + 1; i++){
-                this.userAnswers.push(document.querySelector(`input[name=q${i}]:checked`).value);
+                if(!document.querySelector(`input[name="q${i}"]:checked`)){
+                    this.displayMissingAnswer();
+                    return;
+                } else {
+                    this.userAnswers.push(document.querySelector(`input[name="q${i}"]:checked`).value);
+                }
+                
             }
-            
-            this.checkResult();
-            this.userAnswers = [];
+
+                this.checkResult();
+                this.userAnswers = [];
+          
             
         });
     }
