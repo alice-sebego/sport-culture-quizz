@@ -23,11 +23,13 @@ export default class HandleForm{
     }
 
     displayMissingAnswer(){
+
         const missingAnswer = document.createElement("div");
         missingAnswer.style.fontSize = "smaller";
         missingAnswer.innerHTML = "<p>Pour vérifier toutes vos réponses, vous devez répondre à toutes les questions<br/>Vérifiez SVP<p>";
         this._resultDiv.appendChild(missingAnswer);
         this.userAnswers = [];
+        
     }
 
     displayResult(){
@@ -94,14 +96,12 @@ export default class HandleForm{
                     return;
                 } else {
                     this.userAnswers.push(document.querySelector(`input[name="q${i}"]:checked`).value);
-                }
-                
+                }   
             }
 
                 this.checkResult();
                 this.userAnswers = [];
-          
-            
+  
         });
     }
 
