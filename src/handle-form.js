@@ -95,7 +95,7 @@ export default class HandleForm{
 
                 this.checkResult();
                 this.userAnswers = [];
-  
+                window.scrollTo(0, 2000);
         });
     }
 

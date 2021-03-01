@@ -9488,6 +9488,7 @@ var HandleForm = /*#__PURE__*/function () {
         _this2.checkResult();
 
         _this2.userAnswers = [];
+        window.scrollTo(0, 2000);
       });
     }
   }, {
