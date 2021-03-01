@@ -9417,32 +9417,26 @@ var HandleForm = /*#__PURE__*/function () {
 
       switch (this.result) {
         case 0:
-          console.log("5/5");
           this._resultDiv.innerHTML = "<p>5/5</p><img src=\"" + this._gifGoodAnswers[0] + "\"/><p class=\"comment\">Parfait</p>";
           break;
 
         case 1:
-          console.log("4/5");
           this._resultDiv.innerHTML = "<p>4/5</p><img src=\"" + this._gifGoodAnswers[1] + "\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
           break;
 
         case 2:
-          console.log("3/5");
           this._resultDiv.innerHTML = "<p>3/5</p><img src=\"" + this._gifGoodAnswers[2] + "\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
           break;
 
         case 3:
-          console.log("2/5");
           this._resultDiv.innerHTML = "<p>2/5</p><img src=\"" + this._gifGoodAnswers[3] + "\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
           break;
 
         case 4:
-          console.log("1/5");
           this._resultDiv.innerHTML = "<p>1/5</p><img src=\"" + this._gifGoodAnswers[4] + "\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
           break;
 
         case 5:
-          console.log("0/5");
           this._resultDiv.innerHTML = "<p>0/5</p><img src=\"" + this._gifGoodAnswers[5] + "\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
           break;
 
@@ -9659,8 +9653,7 @@ var userAnswers = [];
 var score = []; // Handling submit's event from the user when he ou she has answered all questions
 
 var submitForm = new _handle_form_js__WEBPACK_IMPORTED_MODULE_0__.default($form, $fieldsets, $resultDisplay, goodAnswers, userAnswers, score, $result, _gif_list_js__WEBPACK_IMPORTED_MODULE_1__.default);
-submitForm.submitEvent();
-console.log(submitForm.userAnswers); // Handling click's event on fieldsets
+submitForm.submitEvent(); // Handling click's event on fieldsets
 
 submitForm.clickAnswer("white"); // Handle date in the footer's content
 

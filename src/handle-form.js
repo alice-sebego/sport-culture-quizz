@@ -39,27 +39,21 @@ export default class HandleForm{
 
         switch (this.result) {
             case 0:
-                console.log("5/5");
                 this._resultDiv.innerHTML = "<p>5/5</p><img src=\""+ this._gifGoodAnswers[0] +"\"/><p class=\"comment\">Parfait</p>"; 
                 break;
             case 1:
-                console.log("4/5");
                 this._resultDiv.innerHTML = "<p>4/5</p><img src=\""+ this._gifGoodAnswers[1] +"\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
                 break;
             case 2:
-                console.log("3/5");
                 this._resultDiv.innerHTML = "<p>3/5</p><img src=\""+ this._gifGoodAnswers[2] +"\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
                 break;
             case 3:
-                console.log("2/5");
                 this._resultDiv.innerHTML = "<p>2/5</p><img src=\""+ this._gifGoodAnswers[3] +"\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
                 break;
             case 4:
-                console.log("1/5");
                 this._resultDiv.innerHTML = "<p>1/5</p><img src=\""+ this._gifGoodAnswers[4] +"\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
                 break;
             case 5:
-                console.log("0/5");
                 this._resultDiv.innerHTML = "<p>0/5</p><img src=\""+ this._gifGoodAnswers[5] +"\"><p class=\"comment\">Retente ta chance en corrigeant tes réponses :)</p>";
                 break;
             default:
