@@ -164,14 +164,6 @@ input[type=submit]:hover{
     color: rgb(9, 86, 131);
 }
 
-@media (min-width: 831px){
-    main{
-        width: 50%;
-    }
-    .question{
-        line-height: 1.5em;
-    }  
-}
 
 footer{
     width: 100%;
@@ -188,4 +180,23 @@ footer{
 footer a{
     color: white;
     text-decoration: none;
+}
+
+@media (min-width: 831px){
+    main{
+        width: 50%;
+    }
+    .question{
+        line-height: 1.5em;
+    }  
+}
+
+@media (max-width: 500px){
+    .answer{
+        padding: 1vh 0;
+    }
+
+    .question{
+        line-height: 1.8em;
+    } 
 }
